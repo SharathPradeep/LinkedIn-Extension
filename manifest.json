@@ -1,0 +1,18 @@
+{
+    "name": "ATG LinkedIN extension",
+    "description": "Advanced LinkedIN extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["tabs","storage"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      { 
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at":"document_start"
+      }
+    ],
+    "host_permissions":["https://*.linkedin.com/search*page"]
+  }
